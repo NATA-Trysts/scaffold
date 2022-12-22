@@ -13,25 +13,25 @@ npx @trysts/scaffold [options]
 Scaffolding a basic `nodejs` service:
 
 ```
-npx @trysts/scaffold --name product
+npx @trysts/scaffold@latest --name product
 ```
 
 Scaffolding a `nodejs` with `mongodb` integration:
 
 ```
-npx @trysts/scaffold --name product --w-mongo
+npx @trysts/scaffold@latest --name product --w-mongo
 ```
 
 Scaffolding a `nodejs` with `kafka` integration:
 
 ```
-npx @trysts/scaffold --name product --w-kafka
+npx @trysts/scaffold@latest --name product --w-kafka
 ```
 
 Scaffolding a `nodejs` with `mongodb` and `kafka` integration:
 
 ```
-npx @trysts/scaffold --name product --w-mongo --w-kafka
+npx @trysts/scaffold@latest --name product --w-mongo --w-kafka
 ```
 
 #### Options
