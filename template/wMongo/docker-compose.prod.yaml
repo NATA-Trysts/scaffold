@@ -1,0 +1,9 @@
+version: '3'  
+services:
+  $PROJECT_NAME$_backend: 
+    build: .
+    image: nata/$PROJECT_NAME$:0.0.1
+    environment:
+      PORT: 1234
+      MONGO_USER: root
+      MONGO_PASSWORD: example

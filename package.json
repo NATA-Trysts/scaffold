@@ -1,0 +1,28 @@
+{
+  "name": "@trysts/scaffold",
+  "version": "0.1.4",
+  "description": "",
+  "main": "index.js",
+  "bin": "bin/cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "yargs": "^17.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NATA-Trysts/scaffold"
+  },
+  "author": "NATA",
+  "bugs": {
+    "url": "https://github.com/NATA-Trysts/scaffold/issues"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "docker"
+  ],
+  "homepage": "https://github.com/NATA-Trysts/scaffold#readme",
+  "license": "MIT"
+}

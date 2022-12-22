@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  $PROJECT_NAME$_backend:
+    build: .
+    container_name: $PROJECT_NAME$
+    environment:
+      - PORT=1234
+      - FAKE_NAME_SERVICE=https://random-data-api.com/api/v2
+    ports:
+      - "8080:1234"
+    command: 'npm start'
+    volumes:
+      - .:/app
