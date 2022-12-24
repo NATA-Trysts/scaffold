@@ -12,6 +12,7 @@ const cdAndInstall = `cd ${serviceName} && npm i`
 const gitInit = `cd ${serviceName} && git init && npm run add:husky`
 const addHusky = `cd ${serviceName} && npx husky add .husky/pre-commit "npx lint-staged"`
 const addHuskyToGit = `cd ${serviceName} && git add .husky/pre-commit`
+// const generateGitIgnore = `cd ${serviceName} && `
 
 const runCommand = (command) => {
   try {
@@ -23,6 +24,8 @@ const runCommand = (command) => {
 
   return true
 }
+
+const createGitIgnore = () => {}
 
 const targetDir = serviceName
 
@@ -63,10 +66,17 @@ const copyTemplateToTarget = (template) => {
     const name = fullPath.replace(templateDir, '')
     const destinationFilePath = path.join(process.cwd(), serviceName, name)
 
+    const destinationGitIgnorePath = path.join(process.cwd(), serviceName, '.gitignore')
+
     let fileContent = fs.readFileSync(originFilePath, 'utf-8').toString()
     let adjustedProjectName = fileContent.replace(/\$PROJECT_NAME\$/gi, serviceName)
 
     fs.writeFileSync(destinationFilePath, adjustedProjectName)
+    fs.writeFileSync(
+      destinationGitIgnorePath,
+      `.DS_Store\nnode_modules\n/dist\n.env.local\n.env.*.local\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\n.idea\n.vscode\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?\npackage-lock.json\n
+    `,
+    )
   })
 }
 
